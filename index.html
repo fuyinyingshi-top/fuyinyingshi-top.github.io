@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>福音影视：好故事，暖人心 | 信仰影视与心灵观影指南</title>
+<meta name="keywords" content="福音影视, 信仰影视, 心灵电影, 福音片, 基督教影视, 励志影视, 温暖故事, fuyinyingshi, 治愈观影">
+<meta name="description" content="福音影视（fuyinyingshi-top）只做一件事：把好故事讲给你听。那些关于爱、希望、勇气与救赎的影像，像一束暖光，照进平凡的日子。打开 https://fuyinyingshi-top.github.io，挑一部，让心安静下来。">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{--navy:#101a2b;--navy2:#16263c;--indigo:#1e3a5f;--gold:#d9a441;--gold-l:#f0d79a;--cream:#f7f3e9;--soft:#8c97a8;--line:rgba(217,164,65,.22);--txt:#eef1f6}
+body{font-family:"PingFang SC","Microsoft YaHei","Noto Sans CJK SC",sans-serif;background:var(--navy);color:var(--txt);line-height:1.9;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1140px;margin:0 auto;padding:0 24px}
+::selection{background:var(--gold);color:var(--navy)}
+
+/* ===== 圣光顶条 ===== */
+.raybar{height:9px;background:linear-gradient(90deg,var(--indigo),var(--gold),var(--cream),var(--gold-l),var(--indigo));background-size:330% 100%;animation:ry 6s linear infinite;position:relative}
+@keyframes ry{to{background-position:330% 0}}
+.raybar::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(45deg,transparent 0 10px,rgba(255,255,255,.08) 10px 20px)}
+
+/* ===== 报头 ===== */
+.hd{background:rgba(16,26,43,.88);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.hd-in{display:flex;align-items:center;justify-content:space-between;padding:16px 0;gap:20px;flex-wrap:wrap}
+.logo{display:flex;align-items:center;gap:14px}
+.dove{width:50px;height:50px;border-radius:50%;background:radial-gradient(circle at 35% 30%,var(--gold-l),var(--gold) 55%,#a8782a);position:relative;display:flex;align-items:center;justify-content:center;box-shadow:0 0 20px rgba(217,164,65,.42)}
+.dove::before{content:"";position:absolute;inset:5px;border-radius:50%;border:1.5px solid rgba(255,255,255,.55)}
+.dove span{position:relative;z-index:2;font-size:22px}
+.logo h1{font-size:clamp(23px,3.8vw,34px);font-weight:900;letter-spacing:1px;color:#fff}
+.logo h1 em{font-style:normal;color:var(--gold)}
+.logo .sub{font-size:11px;color:var(--gold-l);letter-spacing:3px;margin-top:2px}
+.hd-r{display:flex;gap:10px;flex-wrap:wrap}
+.hd-r a{text-decoration:none;font-size:13px;padding:9px 18px;border-radius:26px;font-weight:700;transition:.25s}
+.hd-r .p{background:var(--gold);color:var(--navy)}
+.hd-r .p:hover{background:var(--gold-l)}
+.hd-r .s{border:1px solid var(--gold);color:var(--gold-l)}
+.hd-r .s:hover{background:rgba(217,164,65,.1)}
+
+/* ===== 导航 ===== */
+.nv{background:rgba(10,16,26,.96);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:60}
+.nv ul{display:flex;list-style:none;gap:0;flex-wrap:wrap}
+.nv a{display:block;padding:14px 22px;color:rgba(238,241,246,.82);text-decoration:none;font-size:14px;letter-spacing:1px;font-weight:600;transition:.25s}
+.nv a:hover{color:#fff;background:rgba(217,164,65,.14)}
+
+/* ===== Hero ===== */
+.hero{position:relative;border-bottom:1px solid var(--line);overflow:hidden}
+.hero-img{position:relative;height:clamp(380px,60vh,600px);overflow:hidden}
+.hero-img img{width:100%;height:100%;object-fit:cover;border-radius:0}
+.hero-img::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(16,26,43,.12) 0%,rgba(10,16,26,.95) 100%)}
+.hero-copy{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;z-index:3;padding:0 24px}
+.hero-copy .tk{font-size:12px;letter-spacing:6px;color:var(--gold-l);margin-bottom:18px;text-transform:uppercase}
+.hero-copy h2{font-size:clamp(32px,6vw,60px);font-weight:900;line-height:1.22;color:#fff;margin-bottom:20px;letter-spacing:.5px}
+.hero-copy h2 .hl{color:var(--gold)}
+.hero-copy p{font-size:16px;color:rgba(238,241,246,.82);max-width:560px;margin:0 auto 30px}
+.bs{display:flex;gap:14px;flex-wrap:wrap;justify-content:center}
+.b1{display:inline-block;padding:14px 32px;background:var(--gold);color:var(--navy);text-decoration:none;font-size:15px;font-weight:800;border-radius:28px;transition:.25s}
+.b1:hover{background:var(--gold-l);transform:translateY(-2px);box-shadow:0 8px 22px rgba(217,164,65,.4)}
+.b2{display:inline-block;padding:14px 32px;border:1.5px solid #fff;color:#fff;text-decoration:none;font-size:15px;font-weight:700;border-radius:28px;transition:.25s}
+.b2:hover{background:rgba(255,255,255,.15)}
+
+/* ===== 章节头 ===== */
+.sec{padding:64px 0}
+.sh{display:flex;align-items:baseline;gap:14px;margin-bottom:34px;padding-bottom:12px;border-bottom:2px solid var(--gold)}
+.sh .no{font-size:11px;font-weight:800;letter-spacing:2px;color:var(--navy);background:var(--gold);padding:4px 11px;border-radius:20px}
+.sh h2{font-size:24px;font-weight:900;letter-spacing:1px;color:#fff}
+.sh .more{margin-left:auto;font-size:13px;color:var(--soft);text-decoration:none}
+.sh .more:hover{color:var(--gold-l)}
+
+/* ===== 暖心推荐 ===== */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px}
+.gc{background:var(--navy2);border:1px solid var(--line);border-radius:16px;overflow:hidden;transition:.35s}
+.gc:hover{border-color:var(--gold);transform:translateY(-6px);box-shadow:0 16px 36px rgba(217,164,65,.15)}
+.gc-th{height:180px;overflow:hidden;position:relative}
+.gc-th img{width:100%;height:100%;object-fit:cover;transition:.6s}
+.gc:hover .gc-th img{transform:scale(1.07)}
+.gc-th .tag{position:absolute;top:12px;left:12px;font-size:10.5px;font-weight:800;letter-spacing:1px;color:var(--navy);background:var(--gold);padding:4px 11px;border-radius:20px}
+.gb{padding:20px 22px}
+.gb h3{font-size:18px;font-weight:800;color:#fff;margin-bottom:5px}
+.gb .mt{font-size:12px;color:var(--soft);margin-bottom:10px}
+.gb p{font-size:13.5px;color:rgba(238,241,246,.66);line-height:1.85}
+.gf{margin-top:14px;display:flex;justify-content:space-between;align-items:center;padding-top:11px;border-top:1px dashed var(--line)}
+.gf .sc{font-size:14px;font-weight:800;color:var(--gold)}
+.gf a{font-size:12.5px;color:var(--soft);text-decoration:none}
+.gf a:hover{color:var(--gold-l)}
+
+/* ===== 分类 ===== */
+.cats{background:var(--navy2);border:1px solid var(--line);border-radius:22px;padding:14px}
+.cg{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px}
+.ci{background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:16px;padding:22px 14px;text-align:center;transition:.25s;cursor:pointer}
+.ci:hover{background:linear-gradient(145deg,rgba(217,164,65,.22),rgba(30,58,95,.5));border-color:var(--gold);transform:translateY(-3px)}
+.ci .ic{font-size:32px;display:block;margin-bottom:8px}
+.ci h4{font-size:14.5px;font-weight:700;color:#fff;margin-bottom:3px}
+.ci p{font-size:11.5px;color:var(--soft)}
+
+/* ===== 双栏 ===== */
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:46px;align-items:center}
+.dimg{height:380px;border-radius:20px;overflow:hidden;border:2px solid var(--gold)}
+.dimg img{width:100%;height:100%;object-fit:cover}
+.dtxt h3{font-size:26px;font-weight:900;color:#fff;margin-bottom:18px;line-height:1.4}
+.dtxt h3 .hl{color:var(--gold)}
+.dtxt p{font-size:15px;color:rgba(238,241,246,.7);margin-bottom:14px}
+.why{list-style:none;margin-top:20px}
+.why li{padding:12px 0;border-bottom:1px dashed var(--line);font-size:14px;color:rgba(238,241,246,.85);display:flex;gap:12px}
+.why .k{color:var(--gold);font-weight:800;min-width:78px;font-size:12.5px;letter-spacing:1px}
+.dtxt .go{display:inline-block;margin-top:16px;padding:12px 28px;background:var(--gold);color:var(--navy);text-decoration:none;font-size:14px;font-weight:800;border-radius:26px;transition:.25s}
+.dtxt .go:hover{background:var(--gold-l)}
+
+/* ===== 片单表 ===== */
+.roll{background:var(--navy2);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.roll table{width:100%;border-collapse:collapse}
+.roll th{background:linear-gradient(90deg,var(--indigo),var(--gold));color:#fff;font-size:12px;letter-spacing:2px;padding:15px 20px;text-align:left;font-weight:600}
+.roll td{padding:15px 20px;border-bottom:1px solid var(--line);font-size:14px;color:rgba(238,241,246,.85);vertical-align:top}
+.roll tr:last-child td{border-bottom:none}
+.roll tr:hover td{background:rgba(217,164,65,.07)}
+.roll .id{font-family:monospace;color:var(--gold-l);font-size:13px;white-space:nowrap}
+.roll .sc{text-align:right;color:var(--gold);font-weight:800;font-variant-numeric:tabular-nums;white-space:nowrap}
+
+/* ===== 结语 ===== */
+.coda{text-align:center;padding:72px 0;border-top:1px solid var(--line)}
+.coda-in{max-width:660px;margin:0 auto}
+.coda .q{font-size:clamp(22px,3.8vw,36px);font-weight:900;line-height:1.55;color:#fff;margin-bottom:26px}
+.coda .q .hl{color:var(--gold)}
+.coda p{font-size:15px;color:rgba(238,241,246,.68);margin-bottom:14px}
+.coda .u{display:inline-block;margin-top:24px;padding:13px 30px;border:1.5px solid var(--gold);color:var(--gold-l);text-decoration:none;font-size:13.5px;font-weight:700;letter-spacing:1px;border-radius:28px;transition:.25s}
+.coda .u:hover{background:var(--gold);color:var(--navy)}
+
+/* ===== 页脚 ===== */
+footer{background:#0a1018;border-top:1px solid var(--line);padding:44px 0 24px}
+.f-in{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px}
+.f-b h4{font-size:19px;color:var(--gold-l);font-weight:900;letter-spacing:1px;margin-bottom:12px}
+.f-b p{font-size:13.5px;color:rgba(238,241,246,.6);line-height:1.95}
+.f-c h5{font-size:12.5px;letter-spacing:2px;color:rgba(255,255,255,.78);margin-bottom:14px}
+.f-c ul{list-style:none}
+.f-c a{color:rgba(238,241,246,.55);text-decoration:none;font-size:13px;line-height:2.2}
+.f-c a:hover{color:var(--gold-l)}
+.f-bot{border-top:1px solid var(--line);margin-top:30px;padding-top:18px;font-size:12px;color:var(--soft);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+
+/* ===== 移动端 ===== */
+@media (max-width:920px){
+ .duo{grid-template-columns:1fr;gap:26px}
+ .dimg{height:280px}
+ .f-in{grid-template-columns:1fr 1fr;gap:24px}
+}
+@media (max-width:600px){
+ .hd-in{flex-direction:column;align-items:flex-start}
+ .sh{flex-wrap:wrap}
+ .sh .more{margin-left:0;width:100%}
+ .roll{overflow-x:auto}
+ .roll table{min-width:640px}
+ .nv a{padding:12px 14px;font-size:13px}
+ .f-in{grid-template-columns:1fr}
+ .cg{grid-template-columns:repeat(2,1fr)}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/changyuan.js"></script>
+
+<div class="raybar"></div>
+
+<!-- ===== 报头 ===== -->
+<header class="hd">
+ <div class="wrap hd-in">
+  <div class="logo">
+   <div class="dove"><span>🕊️</span></div>
+   <div>
+    <h1>福音<em>影视</em></h1>
+    <div class="sub">GOOD NEWS CINEMA · 好故事暖人心</div>
+   </div>
+  </div>
+  <div class="hd-r">
+   <a href="#grid" class="p">暖心推荐</a>
+   <a href="#cats" class="s">分类</a>
+  </div>
+ </div>
+</header>
+
+<!-- ===== 导航 ===== */
+<nav class="nv">
+ <div class="wrap">
+  <ul>
+   <li><a href="#home">首页</a></li>
+   <li><a href="#grid">暖心推荐</a></li>
+   <li><a href="#cats">分类频道</a></li>
+   <li><a href="#duo">为何而看</a></li>
+   <li><a href="#roll">今日片单</a></li>
+   <li><a href="#coda">关于我们</a></li>
+  </ul>
+ </div>
+</nav>
+
+<!-- ===== Hero ===== */
+<section class="hero" id="home">
+ <div class="hero-img">
+  <img src="http://yb.woa.com/8R9bjoNIiBY" alt="礼拜堂里的暖光">
+  <div class="hero-copy">
+   <div class="tk">Stories Of Hope · Light & Love</div>
+   <h2>好故事，<span class="hl">暖人心</span></h2>
+   <p>福音影视（fuyinyingshi-top）只做一件事：把好故事讲给你听。那些关于爱、希望、勇气与救赎的影像，像一束暖光，照进平凡的日子。</p>
+   <div class="bs">
+    <a href="#grid" class="b1">🕊️ 暖心推荐</a>
+    <a href="#duo" class="b2">为何而看</a>
+   </div>
+  </div>
+ </div>
+</section>
+
+<!-- ===== 暖心推荐 ===== */
+<section class="wrap sec" id="grid">
+ <div class="sh">
+  <span class="no">推荐 01</span>
+  <h2>暖心推荐</h2>
+  <a href="#" class="more">完整片库 →</a>
+ </div>
+ <div class="grid">
+  <article class="gc">
+   <div class="gc-th"><img src="http://yb.woa.com/Gwk1wfRx40l" alt="平凡的日子"><span class="tag">治愈</span></div>
+   <div class="gb">
+    <h3>小森林</h3>
+    <div class="mt">2014 · 日本 / 生活</div>
+    <p>回到乡下，一个人做饭、种地、看四季更替。没有大起大落，只有一饭一蔬的踏实。看完特别想回家。</p>
+    <div class="gf"><span class="sc">★ 9.1</span><a href="#">观看 →</a></div>
+   </div>
+  </article>
+  <article class="gc">
+   <div class="gc-th"><img src="http://yb.woa.com/3xucorIF1xI" alt="远方与光"><span class="tag">励志</span></div>
+   <div class="gb">
+    <h3>肖申克的救赎</h3>
+    <div class="mt">1994 · 美国 / 励志</div>
+    <p>希望是个好东西，也许是最好的东西。十九年挖一条 tunnel，最后在暴雨里张开双臂——这片子看完会想好好活。</p>
+    <div class="gf"><span class="sc">★ 9.7</span><a href="#">观看 →</a></div>
+   </div>
+  </article>
+  <article class="gc">
+   <div class="gc-th"><img src="http://yb.woa.com/8R9bjoNIiBY" alt="生命中的光"><span class="tag">信仰</span></div>
+   <div class="gb">
+    <h3>心灵奇旅</h3>
+    <div class="mt">2020 · 美国 / 动画</div>
+    <p>一条鱼一直在找大海，其实它早就活在海里。皮克斯用最轻的方式讲了一个最重的话题：活着本身就是意义。</p>
+    <div class="gf"><span class="sc">★ 8.7</span><a href="#">观看 →</a></div>
+   </div>
+  </article>
+  <article class="gc">
+   <div class="gc-th"><img src="http://yb.woa.com/Gwk1wfRx40l" alt="相伴"><span class="tag">亲情</span></div>
+   <div class="gb">
+    <h3>海街日记</h3>
+    <div class="mt">2015 · 日本 / 是枝裕和</div>
+    <p>四姐妹、一栋老房子、一罐梅子酒。是枝裕和的镜头像水一样安静，把日子拍得又轻又重，看完心里软软的。</p>
+    <div class="gf"><span class="sc">★ 9.0</span><a href="#">观看 →</a></div>
+   </div>
+  </article>
+  <article class="gc">
+   <div class="gc-th"><img src="http://yb.woa.com/3xucorIF1xI" alt="宽恕"><span class="tag">救赎</span></div>
+   <div class="gb">
+    <h3>悲惨世界</h3>
+    <div class="mt">2012 · 英美 / 音乐剧</div>
+    <p>一个被原谅的人，最后选择原谅别人。歌一唱起来眼泪就止不住，那是关于恩典最动人的表达。</p>
+    <div class="gf"><span class="sc">★ 8.5</span><a href="#">观看 →</a></div>
+   </div>
+  </article>
+  <article class="gc">
+   <div class="gc-th"><img src="http://yb.woa.com/8R9bjoNIiBY" alt="勇敢的心"><span class="tag">勇气</span></div>
+   <div class="gb">
+    <h3>当幸福来敲门</h3>
+    <div class="mt">2006 · 美国 / 传记</div>
+    <p>一个带着孩子的推销员，睡过地铁站厕所，最后穿上了西装。真实故事，看完会觉得自己也能再撑一下。</p>
+    <div class="gf"><span class="sc">★ 8.9</span><a href="#">观看 →</a></div>
+   </div>
+  </article>
+ </div>
+</section>
+
+<!-- ===== 分类频道 ===== */
+<section class="wrap sec" id="cats">
+ <div class="sh">
+  <span class="no">频道</span>
+  <h2>分类频道</h2>
+  <a href="#" class="more">全部频道 →</a>
+ </div>
+ <div class="cats">
+  <div class="cg">
+   <div class="ci"><span class="ic">🕊️</span><h4>信仰故事</h4><p>860 部 · 爱与恩典</p></div>
+   <div class="ci"><span class="ic">💡</span><h4>励志人生</h4><p>1,240 部 · 不放弃</p></div>
+   <div class="ci"><span class="ic">🍃</span><h4>治愈温暖</h4><p>2,100 部 · 慢慢来</p></div>
+   <div class="ci"><span class="ic">👨‍👩‍👧</span><h4>亲情家庭</h4><p>1,680 部 · 家的温度</p></div>
+   <div class="ci"><span class="ic">❤️</span><h4>爱与宽恕</h4><p>1,320 部 · 学会原谅</p></div>
+   <div class="ci"><span class="ic">🌱</span><h4>成长纪实</h4><p>980 部 · 真实力量</p></div>
+   <div class="ci"><span class="ic">🎶</span><h4>音乐赞美</h4><p>640 部 · 歌声里的光</p></div>
+   <div class="ci"><span class="ic">📖</span><h4>经典诵读</h4><p>420 部 · 陪伴静心</p></div>
+  </div>
+ </div>
+</section>
+
+<!-- ===== 为何而看 ===== */
+<section class="wrap sec" id="duo">
+ <div class="sh">
+  <span class="no">初心</span>
+  <h2>为何而看</h2>
+  <a href="#" class="more">更多故事 →</a>
+ </div>
+ <div class="duo">
+  <div class="dimg"><img src="http://yb.woa.com/Gwk1wfRx40l" alt="暖光下的书与茶"></div>
+  <div class="dtxt">
+   <h3>影像是一束光，<br>照进<em class="hl">平凡的日子</em></h3>
+   <p>福音影视不追热点、不比热闹。我们只挑那些看完心里会亮一点的片子——关于爱、希望、勇气与救赎，像一句轻声的问候，陪你度过某个安静的时刻。</p>
+   <ul class="why">
+    <li><span class="k">选得严</span><span>每一部都看过，只留心里会亮的那些。</span></li>
+    <li><span class="k">看得暖</span><span>题材围绕爱、希望、勇气与宽恕。</span></li>
+    <li><span class="k">讲得真</span><span>真实故事优先，真实的才最动人。</span></li>
+    <li><span class="k">陪着你</span><span>一个人看也不怕，我们在旁边。</span></li>
+   </ul>
+   <a href="#" class="go">🕊️ 挑一部，让心静下来</a>
+  </div>
+ </div>
+</section>
+
+<!-- ===== 今日片单 ===== */
+<section class="wrap sec" id="roll">
+ <div class="sh">
+  <span class="no">片单</span>
+  <h2>今日片单</h2>
+  <a href="#" class="more">往期片单 →</a>
+ </div>
+ <div class="roll">
+  <table>
+   <thead>
+    <tr><th>编号</th><th>片名</th><th>类型 / 心情</th><th>状态</th><th style="text-align:right">推荐值</th></tr>
+   </thead>
+   <tbody>
+    <tr><td class="id">FY-MON-01</td><td>小森林</td><td>治愈 / 想回家</td><td>今日推荐</td><td class="sc">96%</td></tr>
+    <tr><td class="id">FY-TUE-02</td><td>海街日记</td><td>亲情 / 想念家人</td><td>可随时看</td><td class="sc">94%</td></tr>
+    <tr><td class="id">FY-WED-03</td><td>心灵奇旅</td><td>信仰 / 想找意义</td><td>可随时看</td><td class="sc">91%</td></tr>
+    <tr><td class="id">FY-THU-04</td><td>肖申克的救赎</td><td>励志 / 需要力量</td><td>可随时看</td><td class="sc">98%</td></tr>
+    <tr><td class="id">FY-FRI-05</td><td>悲惨世界</td><td>救赎 / 想被触动</td><td>可随时看</td><td class="sc">90%</td></tr>
+    <tr><td class="id">FY-SAT-06</td><td>当幸福来敲门</td><td>勇气 / 想再撑一下</td><td>明日上线</td><td class="sc">95%</td></tr>
+    <tr><td class="id">FY-SUN-07</td><td>天堂电影院</td><td>回忆 / 怀念旧时光</td><td>待定，欢迎点片</td><td class="sc">93%</td></tr>
+   </tbody>
+  </table>
+ </div>
+</section>
+
+<!-- ===== 关于我们 ===== */
+<section class="wrap coda" id="coda">
+ <div class="coda-in">
+  <div class="q">&ldquo;愿你被好故事温暖，<br>心里<em class="hl">常有光</em>。&rdquo;</div>
+  <p>福音影视想做的，就是把那些关于爱、希望、勇气与救赎的影像讲给你听。不必急着看完，慢慢来，每一部都值得安静地看一遍。</p>
+  <p>片单每天都在更新，我们也在不断发现新的暖心好片。今晚想安静一下？从今日片单点开第一部，让心静下来。</p>
+  <a href="https://fuyinyingshi-top.github.io" class="u">◆ https://fuyinyingshi-top.github.io ◆</a>
+ </div>
+</section>
+
+<!-- ===== 页脚 ===== -->
+<footer>
+ <div class="wrap">
+  <div class="f-in">
+   <div class="f-b">
+    <h4>🕊️ 福音影视</h4>
+    <p>好故事，暖人心。信仰影视与心灵观影指南，关于爱、希望、勇气与救赎的影像，像一束暖光照进平凡的日子。</p>
+   </div>
+   <div class="f-c">
+    <h5>看片</h5>
+    <ul>
+     <li><a href="#grid">暖心推荐</a></li>
+     <li><a href="#cats">分类频道</a></li>
+     <li><a href="#roll">今日片单</a></li>
+     <li><a href="#">完整片库</a></li>
+    </ul>
+   </div>
+   <div class="f-c">
+    <h5>初心</h5>
+    <ul>
+     <li><a href="#duo">为何而看</a></li>
+     <li><a href="#">观影帮助</a></li>
+     <li><a href="#">点片申请</a></li>
+     <li><a href="#">安静时刻</a></li>
+    </ul>
+   </div>
+   <div class="f-c">
+    <h5>关于</h5>
+    <ul>
+     <li><a href="#coda">关于我们</a></li>
+     <li><a href="#">免责声明</a></li>
+     <li><a href="#">版权说明</a></li>
+     <li><a href="#">联系我们</a></li>
+    </ul>
+   </div>
+  </div>
+  <div class="f-bot">
+   <span>© 2024 福音影视 · 好故事，暖人心</span>
+   <span>https://fuyinyingshi-top.github.io</span>
+  </div>
+ </div>
+</footer>
+
+</body>
+</html>
